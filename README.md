@@ -73,3 +73,95 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+1.real number imagainary number program
+#include <iostream.h>
+class complex {
+private:
+
+double real;
+
+double imag;
+
+public:
+
+complex(double r = 0, double i = 0): real(r), imag(i) {}
+
+void getval() {
+
+cout << "Enter the real: ";
+
+cin >> real;
+
+cout << "Enter the imaginary: ";
+
+cin >> imag;
+
+}
+
+complex operator+(const complex& obj1) {
+
+return complex(real + obj1.real, imag + obj1.imag); }
+
+complex operator-(const complex& obj1) {
+
+return complex(real - obj1.real, imag - obj1.imag); }
+
+complex operator* (double scalar) {
+
+return complex(real* scalar, imag * scalar); }
+
+void print() {
+
+cout << real << "+" << imag << "i" << endl; }
+
+};
+
+int main() {
+
+complex num1, num2, add, sub, multi_num1,
+
+multi_num2;
+
+double scalar;
+
+num1.getval();
+
+num2.getval();
+
+cout << "Enter the scalar: ";
+
+cin >> scalar;
+
+add=num1 + num2;
+
+cout << "ADDITION: ";
+
+add.print();
+
+sub=num1 - num2;
+
+cout << "SUBTRACTION: ";
+
+sub.print();
+
+cout << "MULTIPLICATION FROM NUM1: ";
+
+multi_num1 = num1 * scalar;
+
+multi_num1.print();
+
+cout << "MULTIPLICATION FROM NUM2: ";
+
+multi_num2 = num2* scalar;
+
+multi_num2.print();
+
+return 0;
+
+}
